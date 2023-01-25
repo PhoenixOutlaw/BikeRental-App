@@ -4,11 +4,11 @@ import DrawerNavigation from "./DrawerNavigation";
 import AuthNavigation from "./AuthNavigation";
 
 export default function RootNavigation() {
-  const login = useSelector((state) => state.login.signedIn);
-
+  // const login = useSelector((state) => state.login.signedIn);
+  const login=false;
   return (
     <NavigationContainer>
-      {!login ? <AuthNavigation /> : <DrawerNavigation />}
+      {login ? <AuthNavigation /> : <DrawerNavigation />}
     </NavigationContainer>
   );
 }
