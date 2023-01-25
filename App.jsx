@@ -12,20 +12,13 @@ import { SafeAreaView, View } from "react-native";
 
 export default function App() {
   // SplashScreen.preventAutoHideAsync();
-  const [fontLoaded, setFontLoaded] = useState(false);
-  useEffect(() => {
-    loadfonts({ load: setFontLoaded });
-  }, []);
-
-  if (!fontLoaded) {
-    return null;
-  }
+  
   
   return (
     <Provider store={store}>
       <SafeAreaView style={Gbs.SafeArea} className=" flex flex-1 relative">
         <Main/>
-        <Toast />
+        
       </SafeAreaView>
     </Provider>
   );
